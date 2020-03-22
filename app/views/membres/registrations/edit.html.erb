@@ -1,0 +1,68 @@
+<%=render 'menus/sticky' %>
+<div class="container-fluid">
+        <div class="row">
+    <div class="col-lg-6 offset-lg-1 col-12 bloc-intro-2-form">
+      <h2 class="text-center">Prêt à vous inscrire ?</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row">
+    <div class="form-group col-lg-12">
+    <%= f.label :nom_complet %><br />
+    <%= f.text_field :nom, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= f.label :telephone %><br />
+    <%= f.telephone_field :telephone, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= f.label :sexe %><br />
+    <%= f.collection_select :sexe_id, Sexe.all, :id, :libelle, {prompt:"Choisissez votre sexe"}, class:"form-control"%>
+  </div>
+  <div class="form-group col-lg-12">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class:"form-control" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-group col-lg-12">
+    <%= f.label :mot_de_passe %> <i>(laissez vide si vous comptez pas changer)</i><br />
+    <%= f.password_field :password,class:"form-control"%>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> caractères minimum</em>
+    <% end %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= f.label :confirmer_mot_de_passe %><br />
+    <%= f.password_field :password_confirmation,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= f.label :mot_de_passe_actuel %> <i>(remplissez pour valider vos changements)</i><br />
+    <%= f.password_field :current_password, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= f.submit "Valider les changements", class:"btn btn-outline-danger"  %>
+  </div>
+  </div>
+<% end %>
+
+<h3>Supprimer mon compte</h3>
+
+<p>Pas content? <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Vous êtes sû?" }, method: :delete %></p>
+
+<%= link_to "Revenir à la page précédente", :back %>
+</div>
+    <div class="col-lg-5 bloc-intro-2">
+    </div>
+  </div>
+    
+</div>

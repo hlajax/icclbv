@@ -1,0 +1,29 @@
+<%=render 'menus/sticky' %>
+<div class="container-fluid">
+        <div class="row">
+    <div class="col-lg-6 offset-lg-1 col-12 bloc-intro-1-form">
+		<h2 class="text-center">Mot de passe oublié?</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<div class="row">
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form-group col-lg-12 m-top">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12">
+    <%= f.submit "Recvoir les instructions", class:"btn btn-outline-danger" %>
+  </div>
+  </div>
+<% end %>
+
+<%= render "membres/shared/links" %>
+</div>
+<div class="col-lg-5 bloc-intro-1">
+    </div>
+  </div>
+    
+</div>
+</div>

@@ -1,0 +1,31 @@
+<nav class="navbar  navbar-expand-lg sticky-top bg-icc">
+	<a class="navbar-brand text-bold text-maj" href="/">Impact centre chrétien libreville</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <%=link_to "Commencer un creneau", new_creneau_path, class:"nav-link" %>
+      </li>
+      <% if membre_signed_in?%>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Historique</a>
+      </li>
+      <li class="nav-item">
+        <%=link_to "Modifier mes informations", edit_membre_registration_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+      <%= link_to "Déconnexion", destroy_membre_session_path, class:"nav-link" %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%=link_to "Connexion", new_membre_session_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%=link_to "Inscription", new_membre_registration_path, class:"nav-link" %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

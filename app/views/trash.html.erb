@@ -1,0 +1,12 @@
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <h1><%= current_membre.email %></h1>
+<h1><%= current_membre.sign_in_count %></h1>
+<h1><%= current_membre.current_sign_in_at %></h1>
+<h1><%= current_membre.last_sign_in_at %></h1>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
