@@ -155,11 +155,10 @@ a{
  }
 .intro{
   background: linear-gradient(
-      rgba(154, 18, 179, 0.45), 
-      rgba(154, 18, 179, 0.45)
-    ),
-   url('https://res.cloudinary.com/aseed/image/upload/v1584965376/icc/icc-bg_entrrf.jpg')no-repeat;
-  background-size: cover;
+       background: linear-gradient(
+      rgba(154, 18, 179, 1), 
+      rgba(154, 18, 179, 1)
+    );
   background-position: center;
   height: 100vh;
  }
