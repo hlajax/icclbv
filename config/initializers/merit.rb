@@ -33,14 +33,9 @@ end
 # end
 
 # Create application badges (uses https://github.com/norman/ambry)
-badge_id = 1
- [{
-   id: (badge_id = badge_id+1),
-   name: 'membre-noob'
- }, {
-   id: (badge_id = badge_id+1),
-   name: 'membre-nooby',
-   custom_fields: { category: 'fantasy' }
- }].each do |attrs|
-   Merit::Badge.create! attrs
- end
+Merit::Badge.create!(
+  id: 1001,
+  name: "First-Time Poster",
+  description: "I have posted at least 2 times on the message board."
+)
+end

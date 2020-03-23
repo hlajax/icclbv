@@ -30,8 +30,8 @@ module Merit
       # grant_on 'comments#create', badge: 'commenter', level: 10 do |comment|
       #   comment.user.comments.count == 10
       # end
-      grant_on 'photos#create', badge: 'membre-noob', level: 1 do |photo|
-        photo.membre.photos.count == 1
+      grant_on 'creneaus#create', badge: 'First-Time Poster', (" ") do |creneau|
+        creneau.membre.creneaus.count >= 1 && creneau.membre.creneaus.count < 10
       end
       # If it has 5 votes, grant relevant-commenter badge
       # grant_on 'comments#vote', badge: 'relevant-commenter',

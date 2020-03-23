@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Creneaus</h1>
-
+<%= current_membre.creneaus.count %>
+<ul>
+  <% current_membre.badges.each do |badge| %>
+    <li class="text-danger"><%= badge.name %></li>
+  <% end %>
+</ul>
 <table>
   <thead>
     <tr>

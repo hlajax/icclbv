@@ -1,12 +1,13 @@
-<nav class="navbar  navbar-expand-lg sticky-top bg-icc">
-	<a class="navbar-brand text-bold text-maj" href="/">Impact centre chrétien libreville</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+<div class=" container-fluid sticky-top bg-icc-top">
+  <div class="row">
+      <div class="col-lg-6 col-10 offset-lg-0 offset-1">
+  <h4 class="texte-logo text-bold text-maj">
+    <a href="/">ICC libreville</a></h4>
+  </div>
+  <div class="col-lg-6 col-12">
+    <ul class="nav">
       <li class="nav-item active">
-        <%=link_to "Commencer un creneau", new_creneau_path, class:"nav-link" %>
+        <%=link_to "Créer un creneau", new_creneau_path, class:"nav-link" %>
       </li>
       <% if membre_signed_in?%>
       <li class="nav-item">
@@ -28,4 +29,5 @@
       <% end %>
     </ul>
   </div>
-</nav>
+  </div>
+</div>
