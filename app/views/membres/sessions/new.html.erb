@@ -1,40 +1,36 @@
 <%=render 'menus/sticky' %>
 <div class="container-fluid">
         <div class="row">
-    <div class="col-lg-6 offset-lg-1 col-12 bloc-intro-1-form">
+    <div class="col-lg-6 offset-lg-3 col-12 bloc-intro-1-form text-white">
       <h2 class="text-center">Prêt à y retourner <br> aujourd'hui ?</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="row">
-  <div class="form-group col-lg-12">
+  <div class="form-group col-lg-8 offset-lg-2 col-12">
     <%= f.label :login %><br />
     <%= f.email_field :email, class:"form-control" %>
   </div>
 
-  <div class="form-group col-lg-12">
+  <div class="form-group col-lg-8 offset-lg-2 col-12">
     <%= f.label :mot_de_passe %><br />
     <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="form-group col-lg-12">
+    <div class="form-group col-lg-8 offset-lg-2 col-12">
       <%= f.check_box :remember_me %>
       <%= f.label :se_souvenir_de_moi %>
     </div>
   <% end %>
 
-  <div class="form-group col-lg-12">
-    <%= f.submit "Connexion", class:"btn btn-outline-danger" %>
+  <div class="form-group col-lg-8 offset-lg-2 col-12">
+    <%= f.submit "Connexion", class:"btn btn-outline-light" %>
   </div>
-  <div class="form-group col-lg-12">
+  <div class="form-group col-lg-8 offset-lg-2">
     <%= render "membres/shared/links" %>
   </div>
   </div>
 <% end %>
 
 </div>
-<div class="col-lg-5 bloc-intro-1 d-lg-block d-none">
-    </div>
   </div>
-    
-</div>
 </div>

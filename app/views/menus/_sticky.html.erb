@@ -1,13 +1,12 @@
-<div class=" container-fluid sticky-top bg-icc-top">
-  <div class="row">
-      <div class="col-lg-6 col-10 offset-lg-0 offset-1">
-  <h4 class="texte-logo text-bold text-maj">
-    <a href="/">ICC libreville</a></h4>
+<div class=" container-fluid">
+  <div class="row m-top-min">
+      <div class="col-lg-2 col-3">
+    <a href="/"><img class="logo" src="https://res.cloudinary.com/aseed/image/upload/v1584958107/icc/LOGO-BLANC_lbmdtm.png" alt=""></a>
   </div>
-  <div class="col-lg-6 col-12">
-    <ul class="nav">
+  <div class="col-lg-10 col-9 align-self-center">
+    <ul class="nav float-right">
       <li class="nav-item active">
-        <%=link_to "Prier maintenant", new_creneau_path, class:"nav-link" %>
+        <%=link_to "Prier", new_creneau_path, class:"nav-link" %>
       </li>
       <% if membre_signed_in?%>
       <li class="nav-item">
@@ -22,9 +21,6 @@
       <% else %>
       <li class="nav-item">
         <%=link_to "Connexion", new_membre_session_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%=link_to "Inscription", new_membre_registration_path, class:"nav-link" %>
       </li>
       <% end %>
     </ul>

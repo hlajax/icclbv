@@ -14,3 +14,29 @@
             <td><%= link_to 'Show', creneau %></td>
         <td><%= link_to 'Edit', edit_creneau_path(creneau) %></td>
         <td><%= link_to 'Destroy', creneau, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+              <li class="nav-item">
+        <%=link_to "Inscription", new_membre_registration_path, class:"nav-link" %>
+      </li>
+
+      <%= link_to 'Retour', creneaus_path %>
+
+      <%= link_to 'Show', @creneau %> |
+<%= link_to 'Back', creneaus_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @creneaus.each do |creneau| %>
+      <tr>
+        <td><%=# creneau.heure_debut.to_s(:time)  %></td>
+        <td><%=# creneau.heure_debut.to_s(:time)  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

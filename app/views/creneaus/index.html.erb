@@ -1,28 +1,25 @@
-<p id="notice"><%= notice %></p>
+<%=render 'menus/sticky' %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 offset-lg-3 col-12">
+      <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h5>Salut <%= current_membre.nom %> ! </h5>
+        <h1>Tu as déjà <%= current_membre.creneaus.count %> créneaux</h1>
+        <h5 class="card-title">Merci pour ton engagement</h5>
+        <p class="card-text">
+          N'hésite pas, fais-en encore plus !!!
+        </p>
+        <%= link_to 'Nouveau Creneau', new_creneau_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Creneaus</h1>
-<%= current_membre.creneaus.count %>
-<ul>
-  <% current_membre.badges.each do |badge| %>
-    <li class="text-danger"><%= badge.name %>lll</li>
-  <% end %>
-</ul>
-<table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @creneaus.each do |creneau| %>
-      <tr>
-        <td><%= creneau.titre %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Nouveau Creneau', new_creneau_path %>
+    </div>
+  </div>
+</div>

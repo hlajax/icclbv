@@ -4,7 +4,7 @@ class CreneausController < ApplicationController
   # GET /creneaus
   # GET /creneaus.json
   def index
-    @creneaus = Creneau.all
+    @creneaus = Creneau.where(:membre_id => current_membre)
   end
 
   # GET /creneaus/1
