@@ -28,7 +28,7 @@ class CreneausController < ApplicationController
 
     respond_to do |format|
       if @creneau.save
-        format.html { redirect_to @creneau, notice: 'Creneau was successfully created.' }
+        format.html { redirect_to @creneau, notice: 'Créneau créé.' }
         format.json { render :show, status: :created, location: @creneau }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CreneausController < ApplicationController
   def update
     respond_to do |format|
       if @creneau.update(creneau_params)
-        format.html { redirect_to @creneau, notice: 'Creneau was successfully updated.' }
+        format.html { redirect_to @creneau, notice: 'Créneau modifié.' }
         format.json { render :show, status: :ok, location: @creneau }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CreneausController < ApplicationController
   def destroy
     @creneau.destroy
     respond_to do |format|
-      format.html { redirect_to creneaus_url, notice: 'Creneau was successfully destroyed.' }
+      format.html { redirect_to creneaus_url, notice: 'Créneau supprimé.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class CreneausController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def creneau_params
-      params.require(:creneau).permit(:titre, :membre_id)
+      params.require(:creneau).permit(:titre, :membre_id, :heure_debut, :heure_fin)
     end
 end

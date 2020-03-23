@@ -31,5 +31,3 @@ end
 # }].each do |attrs|
 #   Merit::Badge.create! attrs
 # end
-
-# Create application badges (uses https://github.com/norman/ambry)

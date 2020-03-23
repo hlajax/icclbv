@@ -4,6 +4,14 @@
   <strong>Titre:</strong>
   <%= @creneau.titre %>
 </p>
+<p>
+  <strong>Début:</strong>
+  <%= @creneau.heure_debut.to_s(:time)  %>
+</p>
+<p>
+  <strong>Fin:</strong>
+  <%= @creneau.heure_fin.to_s(:time)  %>
+</p>
 
 <%= link_to 'Edit', edit_creneau_path(@creneau) %> |
 <%= link_to 'Back', creneaus_path %>
