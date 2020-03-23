@@ -22,10 +22,10 @@
 
     <div class="form-group col-lg-6">
     <%= form.label :heure_de_début %>
-    <%= form.time_field :heure_debut, :value => Time.now.in_time_zone('Europe/London').formatted_offset.strftime('%H:%M') , class:"form-control", readonly: true %>
+    <%= form.time_field :heure_debut, :value => Time.now.utc.strftime('%H:%M') , class:"form-control", readonly: true %>
   </div>
 
-    <div class="formgroup col-lg-6">
+    <div class="form-group col-lg-6">
     <%= form.label :heure_de_fin %>
     <%= form.time_field :heure_fin, :value => Time.now.strftime('%H:%M'),  class:"form-control", readonly: true  %>
   </div>
