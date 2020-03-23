@@ -13,13 +13,13 @@ class CreneausController < ApplicationController
   # GET /creneaus/1
   # GET /creneaus/1.json
   def show
-    now = Time.now
-    sikoyo = now + 1.hours
   end
 
   # GET /creneaus/new
   def new
     @creneau = current_membre.creneaus.build
+    now = Time.now
+    @sikoyo = now + 1.hours
   end
 
   # GET /creneaus/1/edit

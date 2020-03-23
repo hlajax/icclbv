@@ -18,13 +18,16 @@
   <% end %>
 
     <div class="form-group col-lg-6 offset-lg-3 col-12">
-    <%= form.label :heure_de_début %>
-    <%= form.text_field :heure_debut, :value => Time.now.to_s , class:"form-control", readonly: true %>
+    
+    <%= form.hidden_field :heure_debut, :value => Time.now , class:"form-control", readonly: true %>
   </div>
 
     <div class="form-group col-lg-6 offset-lg-3 col-12">
-    <%= form.label :heure_de_fin %>
-    <%= form.text_field :heure_fin, :value => Time.now + 1.hours,  class:"form-control", readonly: true  %>
+    <%= form.hidden_field :heure_fin, :value => Time.now + 1.hours,  class:"form-control", readonly: true  %>
+  </div>
+  <div class="form-group col-lg-8 offset-lg-2 col-12 text-center">
+    <h4>Votre créneau de prière prendra fin à <%=@sikoyo.to_s(:time)%></h4>
+    <p><small>*La durée de tous les créneaux est d'une heure, attendez la fin de celui-ci pour en créer un autre.</small></p>
   </div>
 
   <div class="form-group col-lg-6 offset-lg-3 col-12 text-center">

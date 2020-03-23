@@ -40,3 +40,8 @@
     <% end %>
   </tbody>
 </table>
+
+   <div class="form-group col-lg-6 offset-lg-3 col-12">
+    <%= form.label :heure_de_début %>
+    <%= form.text_field :hd, :value => Time.now.utc.strftime("%H:%M") , class:"form-control", readonly: true %>
+  </div>

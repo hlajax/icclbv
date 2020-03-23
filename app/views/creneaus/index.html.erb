@@ -23,30 +23,12 @@
   <tbody>
     <% @creneaus.each do |creneau| %>
       <tr>
-        <td><%=creneau.heure_debut  %></td>
-        <td><%=creneau.heure_fin%></td>
+        <td><%=creneau.heure_debut.to_s(:time)  %></td>
+        <td><%=creneau.heure_fin.to_s(:time)%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-       <table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @kala.each do |creneau| %>
-      <tr>
-        <td><%=creneau.heure_debut  %></td>
-        <td><%=creneau.heure_fin%></td>
-        <td>></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<p><%=@sikoyo%></p>
       </div>
     </div>
   </div>
