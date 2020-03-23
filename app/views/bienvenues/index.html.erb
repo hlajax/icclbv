@@ -1,7 +1,7 @@
 <div class="container-fluid intro" id="intro">
   <div class="row intro-overlay">
     <%=render 'menus/sticky' %>
-    <div class="col-lg-10 offset-lg-1 col-12 m-top text-white text-center">
+    <div class="col-lg-10 offset-lg-1 col-12 d-lg-block d-none m-top text-white text-center">
       <h1 class="section c-titre text-maj">
         Prions ensembles même <br>en temps de crise.
         
@@ -17,8 +17,17 @@
       <%= link_to "Prier maintenant", new_creneau_path, class:"btn btn-primary text-maj text-bold btn-lg btn-lg"%>
 
     </div>
+     <div class="col-lg-10 offset-lg-1 col-12 d-lg-none d-block m-top-max text-white text-center">
+      <h1 class="section c-titre text-maj">
+        Prions ensembles même <br>en temps de crise.
+        
+      </h1>
+      <p class="paragraphe">
+        Créer des créneaux et priez avec nous tous les jours pendants 24h
+      </p>
 
-    <div class="col-lg-10 offset-lg-1 col-12 text-white d-lg-none d-block m-top-max mt-2 mb-4 text-center">
+    </div>
+    <div class="col-lg-10 offset-lg-1 col-12 text-white d-lg-none d-block  text-center">
       <%= link_to "Prier maintenant", new_creneau_path, class:"btn btn-primary text-maj text-bold btn-lg" %>
 
     </div>
