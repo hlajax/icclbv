@@ -154,11 +154,11 @@ a{
   padding: 1%;
  }
 .intro{
-  background: linear-gradient(
-       background: linear-gradient(
+   background: linear-gradient(
       rgba(154, 18, 179, 1), 
       rgba(154, 18, 179, 1)
     );
+  background-size: cover;
   background-position: center;
   height: 100vh;
  }
