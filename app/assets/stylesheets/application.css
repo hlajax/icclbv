@@ -135,11 +135,10 @@ a{
  }
  @media (min-width: 320px) and (max-width: 480px) {
   body {
-    background: linear-gradient(
-      rgba(154, 18, 179, 0.45), 
-      rgba(154, 18, 179, 0.45)
-    ),
-  url('https://res.cloudinary.com/aseed/image/upload/v1584965376/icc/icc-bg_entrrf.jpg')no-repeat;
+     background: linear-gradient(
+      rgba(154, 18, 179, 1), 
+      rgba(154, 18, 179, 1)
+    );
   background-size: cover;
   background-position: center;
   margin: 33px;
@@ -154,10 +153,11 @@ a{
   padding: 1%;
  }
 .intro{
-   background: linear-gradient(
-      rgba(154, 18, 179, 1), 
-      rgba(154, 18, 179, 1)
-    );
+  background: linear-gradient(
+      rgba(154, 18, 179, 0.45), 
+      rgba(154, 18, 179, 0.45)
+    ),
+   url('https://res.cloudinary.com/aseed/image/upload/v1584965376/icc/icc-bg_entrrf.jpg')no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
