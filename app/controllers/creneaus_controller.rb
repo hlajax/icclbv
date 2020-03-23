@@ -69,6 +69,6 @@ class CreneausController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def creneau_params
-      params.require(:creneau).permit(:titre, :membre_id, :heure_debut, :heure_fin)
+      params.require(:creneau).permit(:membre_id, :heure_debut, :heure_fin)
     end
 end
