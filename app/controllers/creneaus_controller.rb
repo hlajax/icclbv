@@ -28,7 +28,7 @@ class CreneausController < ApplicationController
 
     respond_to do |format|
       if @creneau.save
-        format.html { redirect_to @creneau, notice: 'Créneau créé.' }
+        format.html { redirect_to creneaus_url, notice: 'Créneau créé.' }
         format.json { render :show, status: :created, location: @creneau }
       else
         format.html { render :new }
