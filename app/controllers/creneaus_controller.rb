@@ -4,12 +4,17 @@ class CreneausController < ApplicationController
   # GET /creneaus
   # GET /creneaus.json
   def index
-    @creneaus = Creneau.where(:membre_id => current_membre)
+    @creneaus = Creneau.where(:membre_id => current_membre).order("created_at DESC")
+    now = Time.now
+    @sikoyo = now + 1.hours
+    @kala = Creneau.where(:membre_id => current_membre).order("created_at DESC").limit(1)
   end
 
   # GET /creneaus/1
   # GET /creneaus/1.json
   def show
+    now = Time.now
+    sikoyo = now + 1.hours
   end
 
   # GET /creneaus/new

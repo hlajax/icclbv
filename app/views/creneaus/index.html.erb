@@ -13,7 +13,40 @@
         <p class="card-text">
           N'hésite pas, fais-en encore plus !!!
         </p>
-        <%= link_to 'Nouveau Creneau', new_creneau_path, class:"btn btn-primary" %>
+        <table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @creneaus.each do |creneau| %>
+      <tr>
+        <td><%=creneau.heure_debut  %></td>
+        <td><%=creneau.heure_fin%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+       <table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kala.each do |creneau| %>
+      <tr>
+        <td><%=creneau.heure_debut  %></td>
+        <td><%=creneau.heure_fin%></td>
+        <td>></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><%=@sikoyo%></p>
       </div>
     </div>
   </div>

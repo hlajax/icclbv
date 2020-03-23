@@ -19,12 +19,12 @@
 
     <div class="form-group col-lg-6 offset-lg-3 col-12">
     <%= form.label :heure_de_début %>
-    <%= form.time_field :heure_debut, :value => Time.now.utc.strftime('%H:%M') , class:"form-control", readonly: true %>
+    <%= form.text_field :heure_debut, :value => Time.now.to_s , class:"form-control", readonly: true %>
   </div>
 
     <div class="form-group col-lg-6 offset-lg-3 col-12">
     <%= form.label :heure_de_fin %>
-    <%= form.time_field :heure_fin, :value => Time.now.strftime('%H:%M'),  class:"form-control", readonly: true  %>
+    <%= form.text_field :heure_fin, :value => Time.now + 1.hours,  class:"form-control", readonly: true  %>
   </div>
 
   <div class="form-group col-lg-6 offset-lg-3 col-12 text-center">
