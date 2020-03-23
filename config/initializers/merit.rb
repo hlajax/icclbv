@@ -33,9 +33,3 @@ end
 # end
 
 # Create application badges (uses https://github.com/norman/ambry)
-Merit::Badge.create!(
-  id: 1001,
-  name: "First-Time Poster",
-  description: "I have posted at least 2 times on the message board."
-)
-end
