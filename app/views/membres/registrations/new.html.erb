@@ -39,9 +39,9 @@
   </div>
 
 
-   <div class="form-group col-lg-10 offset-lg-1 col-12">
+   <div class="form-group col-lg-10 offset-lg-1 col-12 text-cap">
     <label for="">Êtes-vous un Serviteur Travaillant Activement pour le Royaume?</label>
-    <%= f.collection_select :star_id, Star.all, :id, :libelle, {prompt:"Sélectionnez la bonne réponse"}, required: true, class:"form-control text-cap", id: :two%>
+    <%= f.collection_select :star_id, Star.all, :id, :libelle, {prompt:"Sélectionnez la bonne réponse"}, required: true, class:"form-control", id: :two%>
   </div>
 
 

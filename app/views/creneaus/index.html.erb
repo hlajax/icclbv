@@ -29,7 +29,7 @@
     <tr>
       <th scope="row">1</th>
       <% @crens.each do |creneau| %>
-         <td><%=creneau.created_at.strftime('%d - %B - %Y')%></td>
+         <td><%=creneau.created_at.strftime('%d - %m - %Y')%></td>
          <% end %>
       <td>
           <%=@compte%>
