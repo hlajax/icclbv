@@ -10,7 +10,7 @@
       </li>
       <% if membre_signed_in?%>
       <li class="nav-item">
-        <a class="nav-link" href="creneaus/">Historique</a>
+        <%=link_to "Historique", creneaus_path, class:"nav-link" %>
       </li>
       <li class="nav-item">
         <%=link_to "Modifier mes informations", edit_membre_registration_path, class:"nav-link" %>
