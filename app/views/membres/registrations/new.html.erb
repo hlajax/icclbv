@@ -7,41 +7,41 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 <div class="row">
   <div class="form-group col-lg-10 offset-lg-1 col-12">
-    <%= f.label :nom_complet %><br />
+    <label for="">Nom et Prénom</label>
     <%= f.text_field :nom, required: true, class:"form-control" %>
   </div>
    
   <div class="form-group col-lg-5 offset-lg-1 col-12">
-    <label for="">Votre numéro de téléphone</label>
+    <label for="">Numéro de téléphone</label>
     <%= f.telephone_field :telephone, required: true, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-5 col-12">
-    <label for="">Votre adresse email</label>
+    <label for="">Adresse email</label>
     <%= f.email_field :email, required: true, class:"form-control" %>
   </div>
 
    <div class="form-group col-lg-5 offset-lg-1 col-12">
     <label for="">Quel est votre sexe</label>
-    <%= f.collection_select :sexe_id, Sexe.all, :id, :libelle, {prompt:"Choisissez votre sexe"}, required: true, class:"form-control"%>
+    <%= f.collection_select :sexe_id, Sexe.all, :id, :libelle, {prompt:"Choisissez votre sexe"}, required: true, class:"form-control text-cap"%>
   </div>
 
 
    <div class="form-group col-lg-5 col-12">
-    <label for="">Quel est votre âge</label>
+    <label for="">Tranche d'âge</label>
     <%= f.collection_select :age_id, Age.all, :id, :libelle, {prompt:"Choisissez votre âge"}, required: true, class:"form-control"%>
   </div>
 
 
    <div class="form-group col-lg-10 offset-lg-1 col-12">
     <label for="">Êtes-vous membre d'ICC?</label>
-    <%= f.collection_select :statut_id, Statut.all, :id, :libelle, {prompt:"Répondez par oui ou non"}, class:"form-control", id: :one%>
+    <%= f.collection_select :statut_id, Statut.all, :id, :libelle, {prompt:"Sélectionnez la bonne réponse"}, class:"form-control text-cap", id: :one%>
   </div>
 
 
    <div class="form-group col-lg-10 offset-lg-1 col-12">
-    <label for="">Êtes-vous un STAR?</label>
-    <%= f.collection_select :star_id, Star.all, :id, :libelle, {prompt:"Choisissez votre statut"}, required: true, class:"form-control", id: :two%>
+    <label for="">Êtes-vous un Serviteur Travaillant Activement pour le Royaume?</label>
+    <%= f.collection_select :star_id, Star.all, :id, :libelle, {prompt:"Sélectionnez la bonne réponse"}, required: true, class:"form-control text-cap", id: :two%>
   </div>
 
 
@@ -49,11 +49,11 @@
 
 
   <div class="form-group col-lg-10 offset-lg-1 col-12">
-    <%= f.label :mot_de_passe %>
+    <label for="">Mot de passe</label>
     <% if @minimum_password_length %>
     <small>(<%= @minimum_password_length %> caractères minimum)</small>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", required: true,class:"form-control" %>
+    <%= f.password_field :password, autocomplete: "new-password", required: true,class:"form-control text-cap" %>
   </div>
 
 
