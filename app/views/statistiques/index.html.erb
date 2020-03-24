@@ -1,0 +1,8 @@
+<h1>Statistiques#index</h1>
+<p>Find me in app/views/statistiques/index.html.erb</p>
+ <% @creneaus_by_day.each do |creneau_by_day| %>
+      <tr>
+        <td><%= creneau_by_day.day.strftime("%e") %></td>
+        <td><b><%= creneau_by_day.total %> XFA</b></td>
+      </tr>
+    <% end %>

@@ -4,10 +4,12 @@ class CreneausController < ApplicationController
   # GET /creneaus
   # GET /creneaus.json
   def index
-    @creneaus = Creneau.where(:membre_id => current_membre).order("created_at DESC")
+    #@creneaus = Creneau.where(:membre_id => current_membre)
     now = Time.now
     @sikoyo = now + 1.hours
     @kala = Creneau.where(:membre_id => current_membre).order("created_at DESC").limit(1)
+    @crens = Creneau.where(created_at: (Time.now.midnight)..Time.now.midnight + 1.day).where(:membre_id => current_membre).order("created_at DESC").limit(1)
+     @compte = Creneau.where(created_at: (Time.now.midnight)..Time.now.midnight + 1.day).where(:membre_id => current_membre).order("created_at DESC").count
   end
 
   # GET /creneaus/1

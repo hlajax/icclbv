@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :stars
+  resources :ages
+  resources :statuts
+  resources :statistiques
   resources :creneaus
   get 'bienvenues/index'
   resources :sexes

@@ -45,3 +45,62 @@
     <%= form.label :heure_de_début %>
     <%= form.text_field :hd, :value => Time.now.utc.strftime("%H:%M") , class:"form-control", readonly: true %>
   </div>
+
+  PHONE
+ICC : OUI / NON | Etes vous membre d'Impact Centre Chrétien?
+STAR : OUI / NON | Etes vous un Serviteur Travaillant Activement pour le royaume?
+AGE : 0-25 / 26 + | Quelle âge avez vous ? 
+SEXE : H / F | Vous êtes Un homme / Une femme
+STAR
+Homme d'impact
+Femme d'impact
+Jeune d'impact
+517789538883099
+ID PAGE : 477703499047119
+- Enregistrement a finaliser
+- Liste des créneaux (tableau)
+- Partage d'invitation
+- Nom de domaine
+
+  <div class="row row-cols-1 row-cols-md-3">
+  <% @creneaus.each do |creneau| %>
+  <div class="col mb-4">
+    <div class="card h-100">
+      <figure class="snip1195">
+  <div class="image">
+    <img src="https://res.cloudinary.com/aseed/image/upload/v1584982435/icc/logo_o0dar0.png" alt="sq-sample14"/>
+  </div>
+  <figcaption>
+    <div class="price">
+      <%=creneau.heure_debut.to_s(:time)  %> <s><%=creneau.heure_fin.to_s(:time)%></s>
+    </div>
+</figure>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<%=creneau.heure_debut.to_s(:time)  %> <s><%=creneau.heure_fin.to_s(:time)%></s>
+
+<select id="one">
+  <option value="moto">moto</option>
+  <option value="none">none</option>
+</select>
+
+<select disabled id="two">
+  <option value="volvo">Volvo</option>
+  <option value="audi">Audi</option>
+</select>
+
+<script>
+document.getElementById("one").onchange = function () {
+  document.getElementById("two").setAttribute("disabled", "disabled");
+  if (this.value == 'moto')
+    document.getElementById("two").removeAttribute("disabled");
+};
+</script>
+
+<div class="form-group col-lg-5 col-12">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class:"form-control" %>
+  </div>

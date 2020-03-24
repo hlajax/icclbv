@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_071244) do
+ActiveRecord::Schema.define(version: 2020_03_24_115518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ages", force: :cascade do |t|
+    t.string "libelle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "badges_sashes", force: :cascade do |t|
     t.integer "badge_id"
@@ -32,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_03_23_071244) do
     t.integer "membre_id"
     t.time "heure_debut"
     t.time "heure_fin"
+    t.datetime "cree_le"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -46,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_03_23_071244) do
   end
 
   create_table "membres", force: :cascade do |t|
-    t.string "email", default: "", null: false
+    t.string "email", default: ""
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -63,6 +70,9 @@ ActiveRecord::Schema.define(version: 2020_03_23_071244) do
     t.string "nom"
     t.string "telephone"
     t.integer "sexe_id"
+    t.integer "age_id"
+    t.integer "star_id"
+    t.integer "statut_id"
     t.index ["email"], name: "index_membres_on_email", unique: true
     t.index ["reset_password_token"], name: "index_membres_on_reset_password_token", unique: true
   end
@@ -117,6 +127,18 @@ ActiveRecord::Schema.define(version: 2020_03_23_071244) do
   end
 
   create_table "sexes", force: :cascade do |t|
+    t.string "libelle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stars", force: :cascade do |t|
+    t.string "libelle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "statuts", force: :cascade do |t|
     t.string "libelle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

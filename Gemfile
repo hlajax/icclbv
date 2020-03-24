@@ -27,6 +27,7 @@ gem 'merit'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'popper_js', '~> 1.14.5'
 gem 'meta-tags', '~> 2.13'
+gem 'by_star', git: "git://github.com/radar/by_star"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

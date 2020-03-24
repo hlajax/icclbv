@@ -17,6 +17,27 @@
           N'hésite pas, fais-en encore plus !!!
         </p>
       </div>
+    <table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Jour</th>
+      <th scope="col">créneaux</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <% @crens.each do |creneau| %>
+         <td><%=creneau.created_at.strftime('%d - %B - %Y')%></td>
+         <% end %>
+      <td>
+          <%=@compte%>
+        </td>
+
+    </tr>
+  </tbody>
+</table>
     </div>
   </div>
 </div>
@@ -24,19 +45,4 @@
 
     </div>
   </div>
-  <div class="row row-cols-1 row-cols-md-4">
-  <% @creneaus.each do |creneau| %>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <div class="row">
-        <div class="col col-6 bg-success text-white h-100"><%=creneau.heure_debut.to_s(:time)  %></div>
-        <div class="col col-6 bg-danger text-white h-100"><%=creneau.heure_fin.to_s(:time)%></div>
-      </div>
-      </div>
-    </div>
-  </div>
-  <% end %>
-</div>
 </div>
