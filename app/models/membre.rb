@@ -7,8 +7,5 @@ class Membre < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
   has_many :photos
   has_many :creneaus
-  validates :star_id, presence: false
-  def email_required?
-    false
-  end
+  validates :star_id, :email, presence: false
 end
