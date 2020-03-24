@@ -8,40 +8,40 @@
 <div class="row">
   <div class="form-group col-lg-10 offset-lg-1 col-12">
     <%= f.label :nom_complet %><br />
-    <%= f.text_field :nom, class:"form-control" %>
+    <%= f.text_field :nom, required: true, class:"form-control" %>
   </div>
    
   <div class="form-group col-lg-5 offset-lg-1 col-12">
     <label for="">Votre numéro de téléphone</label>
-    <%= f.telephone_field :telephone, class:"form-control" %>
+    <%= f.telephone_field :telephone, required: true, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-5 col-12">
     <label for="">Votre adresse email</label>
-    <%= f.email_field :email, class:"form-control" %>
+    <%= f.email_field :email, required: true, class:"form-control" %>
   </div>
 
    <div class="form-group col-lg-5 offset-lg-1 col-12">
     <label for="">Quel est votre sexe</label>
-    <%= f.collection_select :sexe_id, Sexe.all, :id, :libelle, {prompt:"Choisissez votre sexe"}, class:"form-control"%>
+    <%= f.collection_select :sexe_id, Sexe.all, :id, :libelle, {prompt:"Choisissez votre sexe"}, required: true, class:"form-control"%>
   </div>
 
 
    <div class="form-group col-lg-5 col-12">
     <label for="">Quel est votre âge</label>
-    <%= f.collection_select :age_id, Age.all, :id, :libelle, {prompt:"Choisissez votre âge"}, class:"form-control"%>
+    <%= f.collection_select :age_id, Age.all, :id, :libelle, {prompt:"Choisissez votre âge"}, required: true, class:"form-control"%>
   </div>
 
 
    <div class="form-group col-lg-10 offset-lg-1 col-12">
-    <label for="">Êtes-vous membre d'Impact Centre Chrétien?</label>
+    <label for="">Êtes-vous membre d'ICC?</label>
     <%= f.collection_select :statut_id, Statut.all, :id, :libelle, {prompt:"Répondez par oui ou non"}, class:"form-control", id: :one%>
   </div>
 
 
    <div class="form-group col-lg-10 offset-lg-1 col-12">
-    <label for="">Etes vous un Serviteur Travaillant Activement pour le royaume?</label>
-    <%= f.collection_select :star_id, Star.all, :id, :libelle, {prompt:"Choisissez votre statut"}, class:"form-control", id: :two%>
+    <label for="">Êtes-vous un STAR?</label>
+    <%= f.collection_select :star_id, Star.all, :id, :libelle, {prompt:"Choisissez votre statut"}, required: true, class:"form-control", id: :two%>
   </div>
 
 
@@ -53,7 +53,7 @@
     <% if @minimum_password_length %>
     <small>(<%= @minimum_password_length %> caractères minimum)</small>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+    <%= f.password_field :password, autocomplete: "new-password", required: true,class:"form-control" %>
   </div>
 
 
