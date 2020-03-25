@@ -25,9 +25,10 @@
         </div>
       </nav>
     </div>
-     <div class="col-lg-10 offset-lg-1 d-xl-none d-lg-none d-md-none d-block">
-      <div class="row bg-purple m-top-min">
-          
+     <div class="col-12 d-xl-none d-lg-none d-md-none d-block">
+      <div class="row  m-top-min">
+        <div class="col-12">
+          <div class="row bg-purple">
             <div class="col-12">
               <p>
                 <small>Nom : <%= current_membre.nom %></small> 
@@ -44,8 +45,8 @@
                 <small>Créé(s) aujourd'hui : <%=@compte%></small>
               </p>
             </div>
-          
-
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -55,8 +56,8 @@
         <thead class="thead-purple">
           <tr>
             <th scope="col">Jour</th>
-            <th scope="col" class="text-center">Heure de début</th>
-            <th scope="col" class="text-center">Heure de fin</th>
+            <th scope="col" class="text-center">Début</th>
+            <th scope="col" class="text-center">Fin</th>
           </tr>
         </thead>
         <tbody>
