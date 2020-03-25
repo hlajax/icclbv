@@ -1,6 +1,6 @@
 <div class="text-white">
 <%- if controller_name != 'sessions' %>
-  Déja membre? <%= link_to "Connectez-vous", new_session_path(resource_name) %><br />
+ Déja membre? <%= link_to "Connectez-vous", new_session_path(resource_name) %><br />
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>

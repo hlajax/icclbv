@@ -2,9 +2,12 @@
 <div class="container-fluid">
         <div class="row">
     <div class="col-lg-6 offset-lg-3 col-12 bloc-intro-1-form text-white">
-      <h2 class="text-center">Prêt à y retourner <br> aujourd'hui ?</h2>
+      <h2 class="text-center">Prêt à y retourner <br> aujourd'hui ?</h2>  
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="row">
+  <div class="form-group col-lg-8 offset-lg-2 col-12">
+    <p id="alert" class="bg-danger text-center"><%= alert %></p>
+  </div>
   <div class="form-group col-lg-8 offset-lg-2 col-12">
     <label for="">Numéro de téléphone</label>
     <%= f.telephone_field :telephone, class:"form-control" %>
