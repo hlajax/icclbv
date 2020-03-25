@@ -1,10 +1,15 @@
-<h2>Change your password</h2>
+<%=render 'menus/sticky' %>
+<div class="container-fluid">
+        <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-12 text-white bloc-intro-1-form">
+    <h2 class="text-center">Nouveau mot de passe</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+<div class="row">
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
+  <div class="form-group col-lg-6 offset-lg-3 m-top">
     <%= f.label :password, "New password" %><br />
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em><br />
@@ -12,14 +17,23 @@
     <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-6 offset-lg-3 m-top">
     <%= f.label :password_confirmation, "Confirm new password" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
+  <div class="form-group col-lg-6 offset-lg-3 m-top">
     <%= f.submit "Change my password" %>
   </div>
+  </div>
 <% end %>
-
+<div class="form-group col-lg-6 offset-lg-3">
 <%= render "membres/shared/links" %>
+</div>
+  </div>
+</div>
+
+  </div>
+    
+</div>
+</div>
