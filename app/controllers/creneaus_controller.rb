@@ -8,7 +8,7 @@ class CreneausController < ApplicationController
     now = Time.now
     @sikoyo = now + 1.hours
     @kala = Creneau.where(:membre_id => current_membre).order("created_at DESC").limit(1)
-    @crens = Creneau.where(created_at: (Time.now.midnight)..Time.now.midnight + 1.day).where(:membre_id => current_membre).order("created_at DESC").limit(1)
+    @crens = Creneau.where(created_at: (Time.now.midnight)..Time.now.midnight + 1.day).where(:membre_id => current_membre).order("created_at DESC")
      @compte = Creneau.where(created_at: (Time.now.midnight)..Time.now.midnight + 1.day).where(:membre_id => current_membre).order("created_at DESC").count
   end
 

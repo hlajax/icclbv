@@ -38,6 +38,30 @@ a{
  	background-position: center;
  	height: 100vh;
  }
+ .thead-purple{
+   background: linear-gradient(
+      rgba(154, 18, 179, 1), 
+      rgba(154, 18, 179, 1)
+    );
+  color:white;
+  border:1px solid white;
+ }
+ .bg-purple{
+   background: white;
+  color:rgba(154, 18, 179, 1);
+ }
+ .text-nom{
+  text-transform: uppercase;
+  font-size: 16px;
+ }
+ .bg-purple .nav-link{
+  color:rgba(154, 18, 179, 1);
+  font-size: 16px;
+  font-weight: normal;
+}
+.bg-purple .nav-link:hover{
+  color:white;
+}
  /*------les backgrounds-----------*/
  .bg-icc{
  	background-color: purple;
@@ -248,6 +272,45 @@ figure.snip1195.hover .add-to-cart {
   background-color: rgba(0, 0, 0, 0.5);
 }
  /*-----slide card----*/
+ /*------side nav-----*/
+ .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+      rgba(22, 165, 218, 1), 
+      rgba(22, 165, 218, 1)
+    );
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+ /*------side nav fin---*/
  @media (min-width: 320px) and (max-width: 480px) {
   body {
      background: linear-gradient(
@@ -263,6 +326,10 @@ figure.snip1195.hover .add-to-cart {
   color:black;
   font-family: 'Open Sans', sans-serif;
 }
+ .text-nom{
+  text-transform: uppercase;
+  font-size: 12px;
+ }
    .bg-icc-top{
   background-color: purple;
   padding: 1%;

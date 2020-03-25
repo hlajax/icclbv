@@ -3,46 +3,78 @@
                  keywords: 'ICC, Créneaux de prières, icc libreville' %>
 <%=render 'menus/sticky' %>
 <div class="container">
+  <p id="notice"><%= notice %></p>
   <div class="row">
-    <div class="col-lg-12 col-12">
-      <p id="notice"><%= notice %></p>
-<div class="row">
-  <div class="col-sm-12">
-    <div class="card">
-      <div class="card-body">
-        <h5>Salut <%= current_membre.nom %> ! </h5>
-        <h1>Tu as déjà <%= current_membre.creneaus.count %> créneaux</h1>
-        <h5 class="card-title">Merci pour ton engagement</h5>
-        <p class="card-text">
-          N'hésite pas, fais-en encore plus !!!
-        </p>
-      </div>
-    <table class="table table-striped table-light">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Jour</th>
-      <th scope="col">créneaux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <% @crens.each do |creneau| %>
-         <td><%=creneau.created_at.strftime('%d - %m - %Y')%></td>
-         <% end %>
-      <td>
-          <%=@compte%>
-        </td>
+    <div class="col-lg-10 offset-lg-1 d-xl-block d-lg-block d-md-block d-none">
+      <nav class="navbar navbar-expand-lg sticky-top bg-purple m-top-min">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link">Nom : <span class="text-nom"><%= current_membre.nom %></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                Tous les créneaux : <%= current_membre.creneaus.count %>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Créneau(x) créé(s) aujourd'hui : <%=@compte%>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+     <div class="col-lg-10 offset-lg-1 d-xl-none d-lg-none d-md-none d-block">
+      <div class="row bg-purple m-top-min">
+          
+            <div class="col-12">
+              <p>
+                <small>Nom : <%= current_membre.nom %></small> 
+            </p>
+            </div>
+              <div class="col-6">
+                <p>
+                  <small>Tous les créneaux : <%= current_membre.creneaus.count %></small>
+                </p>
+              </div>
+           
+            <div class="col-6">
+              <p>
+                <small>Créé(s) aujourd'hui : <%=@compte%></small>
+              </p>
+            </div>
+          
 
-    </tr>
-  </tbody>
-</table>
+      </div>
     </div>
   </div>
-</div>
-
-
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 col-12">
+      <table class="table table-striped table-light">
+        <thead class="thead-purple">
+          <tr>
+            <th scope="col">Jour</th>
+            <th scope="col" class="text-center">Heure de début</th>
+            <th scope="col" class="text-center">Heure de fin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @crens.each do |creneau| %>
+          <tr>
+            <td>
+              Le <%=creneau.created_at.strftime('%d - %m - %Y')%>
+            </td>
+            <td class="table-success text-center">
+              <%= creneau.heure_debut.to_s(:time)  %>
+            </td>
+            <td class="table-danger text-center">
+              <%= creneau.heure_fin.to_s(:time)  %>
+            </td>
+          <% end %>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
