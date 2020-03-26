@@ -48,12 +48,17 @@
 
 
 
-  <div class="form-group col-lg-10 offset-lg-1 col-12">
+  <div class="form-group col-lg-5 offset-lg-1 col-12">
     <label for="">Mot de passe</label>
     <% if @minimum_password_length %>
     <small>(<%= @minimum_password_length %> caractères minimum)</small>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", required: true,class:"form-control text-cap" %>
+    <%= f.password_field :password, autocomplete: "new-password", required: true,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-5 col-12">
+    <label for="">Confirmer votre mot de passe</label>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
   </div>
 
 
